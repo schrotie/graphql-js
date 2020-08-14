@@ -23,7 +23,7 @@ export default process.env.NODE_ENV === 'production'
       if (value) {
         const valueClass = value.constructor;
         const className = constructor.name;
-        if (className && valueClass && valueClass.name === className) {
+        if (className && valueClass && valueClass.name === className) return true; /*{
           throw new Error(
             `Cannot use ${className} "${value}" from another module or realm.
 
@@ -38,7 +38,7 @@ versions may have different capabilities and behavior. The data from one
 version used in the function from another could produce confusing and
 spurious results.`,
           );
-        }
+        }*/
       }
       return false;
     };
